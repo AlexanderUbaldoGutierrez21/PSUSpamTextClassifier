@@ -1,8 +1,6 @@
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import LinearSVC
-from sklearn.model_selection import cross_val_score
-from sklearn.metrics import balanced_accuracy_score, make_scorer
 import re
 
 # LOAD TRAINING DATA
@@ -32,10 +30,6 @@ y_train = train_df['spam']
 # TRAIN MODEL
 model = LinearSVC(random_state=42, max_iter=10000)
 model.fit(X_train, y_train)
-
-# CROSS-VALIDATION BALANCED ACCURACY
-scores = cross_val_score(model, X_train, y_train, cv=5, scoring=make_scorer(balanced_accuracy_score))
-print(f"Cross-validation balanced accuracy: {scores.mean():.4f}")
 
 # PREDICT
 predictions = model.predict(X_test)
