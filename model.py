@@ -35,5 +35,9 @@ model.fit(X_train, y_train)
 predictions = model.predict(X_test)
 
 # OUTPUT PREDICTIONS
-for pred in predictions:
-    print('TRUE' if pred == 1 else 'FALSE')
+import csv
+with open('predictions.csv', 'w', newline='') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(['spam'])
+    for pred in predictions:
+        writer.writerow(['TRUE' if pred == 1 else 'FALSE'])
