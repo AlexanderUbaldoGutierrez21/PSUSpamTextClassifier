@@ -42,4 +42,4 @@ Serve as a baseline or reference implementation for studying linear SVM-based te
 
 ## Research Purposes
 
-Designed for research purposes. Penn State University (PSU), IST 557 Data Mining. Fall 2025.
+Designed for research purposes. Penn State University (PSU), IST 557 Data Mining. Fall 2025. The repository includes a dummy dataset for demonstration and testing purposes.
