@@ -1,4 +1,4 @@
-# PSUSpamTextClassifier
+# Spam Text Classifier
 
 This project implements a text classification model trained on SMS/text message data to distinguish between spam and non-spam (ham) messages. The model applies natural language preprocessing and TF-IDF vectorization before training a Support Vector Classifier to make binary predictions on unlabeled message data, outputting results to a `predictions.csv` file.
 
